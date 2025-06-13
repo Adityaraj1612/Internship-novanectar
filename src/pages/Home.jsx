@@ -1,22 +1,36 @@
 // src/pages/Home.jsx
 import React from 'react'
-import img1 from '../assets/image.png'
+import Hero from '../components/hero'
+import InfoBanner from '../components/InfoBanner'
+import TopPicks from '../components/TopPicks'
+import Community from '../components/Community'
+import StatsBar from '../components/StatsBar'
+import FeaturedCourses from '../components/FeaturedCourses'
+import WhyChooseUs from '../components/WhyChooseUs'
+import Testimonial from '../components/Testimonial'
+import Instructors from '../components/Instructors'
+import LatestNews from '../components/LatestNews'
+import TransformCTA from '../components/TransformCTA'
+import FAQ from '../components/FAQ'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <header className="bg-blue-50">
-      <div className="container mx-auto px-4 lg:px-8 py-20 flex flex-col-reverse lg:flex-row items-center gap-10">
-       
-
-        {/* Right image */}
-        <div className="flex-1">
-          <img
-            src={img1}
-            alt="Student pointing"
-            className="w-full rounded-lg"
-          />
-        </div>
-      </div>
-    </header>
+    <>
+      <Hero />
+      <InfoBanner />        {/* small three‑column info under hero */}
+      <TopPicks />
+      <Community />
+      <StatsBar />
+      <FeaturedCourses />
+      <WhyChooseUs />
+      <Testimonial />
+      <Instructors />
+      <LatestNews />
+      <TransformCTA />
+      <FAQ />
+      <Footer />
+    </>
   )
 }
+
