@@ -1,15 +1,23 @@
 // src/App.jsx
-import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import HomePage from './pages/Home';
+import InternshipCoursesPage from './pages/Intership';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      <Home />
-    </div>
-  )
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/internship" element={<InternshipCoursesPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
