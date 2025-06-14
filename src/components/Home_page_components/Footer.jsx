@@ -1,38 +1,76 @@
-// src/components/Footer.jsx
-import React from 'react'
-import logo from '../../assets/logo.png'
+import { Link } from "react-router-dom";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10">
-      <div className="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="space-y-4">
-          <img src={logo} alt="NovaNectar Logo" className="w-24"/>
-          <p className="text-sm leading-relaxed">
-            NovaNectar EduScrippt Ltd.<br/>
-            Empowering learners with top‑quality online education.
+    <footer className="bg-[#1a253c] text-white py-10 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Company Info */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <div>
+              <h1 className="text-xl font-bold text-blue-400">NOVANECTAR</h1>
+              <p className="text-lg font-semibold">SERVICESPVT .LTD.</p>
+            </div>
+          </div>
+          <p className="text-sm mb-4">
+            We’re just a message away if you need support or have any queries.
           </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-blue-500 hover:bg-blue-600 px-5 py-2 rounded-lg text-white text-sm font-medium"
+          >
+            Contact With Us →
+          </Link>
         </div>
+
+        {/* Links */}
         <div>
-          <h4 className="font-semibold mb-2">Links</h4>
-          <ul className="space-y-1 text-sm">
-            {['Home','Courses','About','Contact'].map((l,i) => <li key={i}>{l}</li>)}
+          <h2 className="text-lg font-semibold mb-3">Links</h2>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/internship">Internship</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/events">Events</Link></li>
           </ul>
         </div>
+
+        {/* Courses */}
         <div>
-          <h4 className="font-semibold mb-2">Courses</h4>
-          <ul className="space-y-1 text-sm">
-            {['UI/UX','Full Stack','Data Science','Python'].map((c,i) => <li key={i}>{c}</li>)}
+          <h2 className="text-lg font-semibold mb-3">Courses</h2>
+          <ul className="space-y-2 text-sm">
+            <li>Web Development</li>
+            <li>Marketing</li>
+            <li>UI UX Designer</li>
+            <li>Data Science</li>
+            <li>Python</li>
           </ul>
         </div>
+
+        {/* Contact */}
         <div>
-          <h4 className="font-semibold mb-2">Contact Us</h4>
-          <p className="text-sm">📞 +91 6278359903<br/>✉️ info@novanectar.in</p>
+          <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
+          <p className="text-sm mb-2">Whatsapp: 8979891703</p>
+          <p className="text-sm mb-2">
+            Location: GMS Road, Dehradun, Uttarakhand, India
+          </p>
+          <p className="text-sm mb-4">Email: Info@Novanectar.Co.In</p>
+          <div className="flex space-x-4">
+            <a href="#"><FaFacebook className="text-xl hover:text-blue-500" /></a>
+            <a href="#"><FaInstagram className="text-xl hover:text-pink-500" /></a>
+            <a href="#"><FaTwitter className="text-xl hover:text-sky-400" /></a>
+            <a href="#"><FaLinkedin className="text-xl hover:text-blue-700" /></a>
+          </div>
         </div>
-      </div>
-      <div className="text-center text-xs text-gray-600 mt-8">
-        &copy; {new Date().getFullYear()} NovaNectar EduScrippt Ltd. All rights reserved.
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
+ 
