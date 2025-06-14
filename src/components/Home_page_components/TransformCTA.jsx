@@ -1,6 +1,6 @@
 // src/components/TransformCTA.jsx
 import React from 'react'
-import student2 from '../assets/transform.png'
+import student2 from '../../assets/transform.png'
 
 export default function TransformCTA() {
   return (

@@ -1,9 +1,9 @@
 // src/components/Instructors.jsx
 import React from 'react'
-import i1 from '../assets/instructor1.png'
-import i2 from '../assets/instructor2.png'
-import i3 from '../assets/instructor3.png'
-import i4 from '../assets/instructor4.png'
+import i1 from '../../assets/instructor1.png'
+import i2 from '../../assets/instructor2.png'
+import i3 from '../../assets/instructor3.png'
+import i4 from '../../assets/instructor4.png'
 
 const instructors = [
   { img: i1, name: 'Brendan Fraser', role: 'Graphic Designer' },

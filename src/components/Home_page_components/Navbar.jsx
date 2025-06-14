@@ -1,8 +1,8 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import { Menu, Search } from 'lucide-react';
-import logo from '../assets/logo.png'; // ✅ Make sure logo.png is correct and exists
-import img1 from '../assets/img2.jpg'; // ✅ Make sure img1.jpg is correct and exists
+import logo from  "../../assets/logo.png"; // ✅ Make sure logo.png is correct and exists
+import img1 from "../../assets/img2.jpg"; // ✅ Make sure img1.jpg is correct and exists
 import { Link } from 'react-router-dom';
 
 

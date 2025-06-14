@@ -1,6 +1,6 @@
 // src/components/LatestNews.jsx
 import React from 'react'
-import blogImg from '../assets/blog.png'
+import blogImg from '../../assets/blog.png'
 
 const posts = [1,2,3].map(i => ({
   img: blogImg,

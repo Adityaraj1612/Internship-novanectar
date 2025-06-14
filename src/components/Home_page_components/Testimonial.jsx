@@ -1,10 +1,10 @@
 // src/components/Testimonial.jsx
 import React from 'react'
-import studentVid from '../assets/student.mp4'
+import studentVid from '../../assets/student.mp4'
 
 export default function Testimonial() {
   return (
-    <section className="py-16 bg-blue-600 text-white">
+    <section className="py-16 bg-[#296AD2] text-white">
       <div className="container mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
         <div className="lg:w-1/2 relative">
           <video

@@ -1,8 +1,8 @@
 // src/components/FeaturedCourses.jsx
 import React from 'react'
-import img1 from '../assets/featured1.png'
-import img2 from '../assets/featured2.png'
-import img3 from '../assets/featured3.png'
+import img1 from '../../assets/featured1.png'
+import img2 from '../../assets/featured2.png'
+import img3 from '../../assets/featured3.png'
 
 const courses = [
   { img: img1, title: 'MERN Full-Stack Development', lessons: 12, students: 8.5, price: 4999, old: 7999 },

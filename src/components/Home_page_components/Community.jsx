@@ -1,6 +1,6 @@
 // src/components/Community.jsx
 import React from 'react'
-import communityImg from '../assets/community.png'
+import communityImg from '../../assets/community.png'
 
 export default function Community() {
   return (
@@ -13,15 +13,15 @@ export default function Community() {
             Connecting learners worldwide through collaborative projects, peer review, and expert mentorship.
           </p>
           <ul className="space-y-2">
-            {['50+ Online Courses','10K+ Active Students','200+ Instructors'].map((t, i) => (
+            {['Flexible Classes','Learn From Anywhere','Learn from Experts'].map((t, i) => (
               <li key={i} className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center">✓</div>
+                <div className="w-6 h-6 bg-green-700 text-white rounded-full flex items-center justify-center">✓</div>
                 {t}
               </li>
             ))}
           </ul>
-          <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-            Learn More →
+          <button className="mt-6 bg-blue-800 text-white px-6 py-2 rounded hover:bg-black transition">
+            Learn More About Us →
           </button>
         </div>
         <div className="md:w-1/2">
