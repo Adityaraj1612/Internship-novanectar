@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import Footer from '../components/Footer';
+import Footer from "../components/Home_page_components/Footer";
+
 import cyberImage from '../assets/cyber-security.jpg';
 import appDevImage from '../assets/app-developement.jpg';
 import dataEngImage from '../assets/data-engineer.jpg';
