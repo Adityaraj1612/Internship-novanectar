@@ -60,7 +60,7 @@ export default function Community() {
           <ul className="space-y-4">
             {['Flexible Classes', 'Learn From Anywhere', 'Learn from Experts'].map((t, i) => (
               <li key={i} className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center">✓</div>
+                <div className="w-6 h-6 bg-[#0EA16B] text-white rounded-full flex items-center justify-center">✓</div>
                 {t}
               </li>
             ))}

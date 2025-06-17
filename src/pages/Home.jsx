@@ -18,10 +18,10 @@ export default function Home() {
     <>
       <Hero />
              {/* small three‑column info under hero */}
+      <FeaturedCourses />
       <TopPicks />
       <Community />
       <StatsBar />
-      <FeaturedCourses />
       <WhyChooseUs />
       <Testimonial />
       <Instructors />
