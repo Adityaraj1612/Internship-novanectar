@@ -6,7 +6,7 @@ import i3 from '../../assets/instructor3.png'
 import i4 from '../../assets/instructor4.png'
 
 const instructors = [
-  { img: i1, name: 'Brendan Fraser', role: 'Graphic Designer' },
+  { img: i1, name: 'Atul Semwal', role: 'Full stack Developer' },
   { img: i2, name: 'Michaels Leonel', role: 'Web Developer' },
   { img: i3, name: 'Jenny Wilson', role: 'Data Scientist' },
   { img: i4, name: 'John Wick', role: 'Digital Marketing' },

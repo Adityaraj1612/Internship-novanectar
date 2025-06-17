@@ -36,6 +36,8 @@ import deimage from '../assets/DE.jpeg';
 import aiimage from '../assets/ai.jpg';
 import vedioiamge from '../assets/vedio editor.jpeg';
 import emailmarketingimage from '../assets/email-marketing-thumbnail.webp';
+import advancedexcelimage from '../assets/advanced-excel.jpg';
+import telecallingimage from '../assets/telecalling.png';
 const CourseCard = ({ title, description, duration, price, oldPrice, image }) => (
   <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 relative">
     <img src={image} alt={`${title} Thumbnail`} className="w-full h-48 object-cover" />
@@ -352,6 +354,22 @@ export default function InternshipCoursesPage() {
       price: '5999',
       oldPrice: '10000',
       image: emailmarketingimage
+    },
+{
+      title: 'Advanced Excel',
+      description: 'This internship are designed to equip individuals with the skills needed to handle large datasets, create insightful reports, and streamline workflows using Excel. ',
+      duration: '3 Months',
+      price: '5999',
+      oldPrice: '10000',
+      image: advancedexcelimage
+    },
+{
+      title: 'Tele Calling',
+      description: 'This internship cover topics like active listening, objection handling, and building rapport, ultimately aiming to enhance customer satisfaction and drive business success.',
+      duration: '3 Months',
+      price: '5999',
+      oldPrice: '10000',
+      image: telecallingimage
     },
   ];
 
