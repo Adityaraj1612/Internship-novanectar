@@ -7,7 +7,7 @@ import StatsBar from '../components/Home_page_components/StatsBar'
 import FeaturedCourses from '../components/Home_page_components/FeaturedCourses'
 import WhyChooseUs from '../components/Home_page_components/WhyChooseUs'
 import Testimonial from '../components/Home_page_components/Testimonial'
-import Instructors from '../components/Home_page_components/Instructors'
+
 import LatestNews from '../components/Home_page_components/LatestNews'
 import TransformCTA from '../components/Home_page_components/TransformCTA'
 import FAQ from '../components/Home_page_components/FAQ'
@@ -18,13 +18,12 @@ export default function Home() {
     <>
       <Hero />
              {/* small three‑column info under hero */}
+              <FeaturedCourses />
       <TopPicks />
       <Community />
       <StatsBar />
-      <FeaturedCourses />
       <WhyChooseUs />
       <Testimonial />
-      <Instructors />
       <LatestNews />
       <TransformCTA />
       <FAQ />
