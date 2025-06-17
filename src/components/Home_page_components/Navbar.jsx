@@ -8,11 +8,11 @@ import { FaXbox } from 'react-icons/fa';
 
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Internship', href: '/internship' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Contact Us', href: '/contact' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Home', href: '/' },
+  { name: 'Internship', href: '/internship' },
+  { name: 'About Us', href: '/about' },      // <-- FIXED HERE
+  { name: 'Contact Us', href: '/contact' },
+  { name: 'Blog', href: '/blog' },
 ];
 
 
