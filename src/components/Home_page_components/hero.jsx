@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           {/* Statistic Card: 10K+ Online Students */}
-          <div className="absolute bottom-10 right-0 transform translate-x-1/2 bg-white rounded-lg shadow-lg px-4 py-3 flex items-center space-x-3">
+          <div className="absolute bottom-10 right-20 z-50 transform translate-x-1/2 bg-white rounded-lg shadow-lg px-4 py-3 flex items-center space-x-3">
             <img src={studentsIcon} alt="10K+" className="w-6 h-6" />
             <div>
               <p className="text-sm font-medium text-gray-900">10K+ Online</p>
