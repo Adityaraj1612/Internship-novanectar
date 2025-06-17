@@ -4,7 +4,7 @@ export default function StatsBar() {
   const stats = [
     { label: 'Courses', target: 50 },
     { label: 'Students', target: 20000 },
-    { label: 'Certificates', target: 15000 },
+    { label: 'Certificates Earned', target: 15000 },
     { label: 'Instructors', target: 200 },
   ];
 

@@ -1,32 +1,61 @@
 // src/components/TransformCTA.jsx
 import React from 'react'
 import student2 from '../../assets/transform.png'
-
+import faqIcon from '../../assets/Vector.png'
 export default function TransformCTA() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2 space-y-4">
-          <h2 className="text-3xl font-bold text-gray-800">Transform Your Future with Excellence in Education</h2>
-          <ul className="space-y-2 text-gray-600">
+        
+        {/* Left column */}
+        <div className="md:w-1/2 pl-4">
+          {/* Contact Us pill */}
+          <div className="flex items-center mb-3">
+            <span className="flex items-center bg-white shadow px-3 py-1 rounded-full">
+              {/* replace with your thunderbolt icon */}
+              <img src={faqIcon} alt="FAQ Icon" className="w-4 h-4" />
+              <span className="text-sm font-medium">Contact Us</span>
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Transform Your Future with Excellence in Education
+          </h2>
+
+          {/* Bullet list */}
+          <ul className="space-y-4 text-gray-600">
             {[
               'Unlock your potential with expert guidance.',
-              'Achieve your career and personal goals.',
-              'Empower yourself with lifelong learning.'
-            ].map((txt,i) => (
-              <li key={i} className="flex items-start gap-2">
-                <div className="w-5 h-5 bg-blue-600 text-white flex items-center justify-center rounded-full">✓</div>
-                {txt}
+              'Achieve your academic and personal goals.',
+              'Empower yourself with lifelong learning skills.'
+            ].map((txt, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="mt-1 w-5 h-5 bg-[#0EA16B] text-white flex items-center justify-center rounded-full">
+                  ✓
+                </div>
+                <span className="text-left">{txt}</span>
               </li>
             ))}
           </ul>
-          <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-            Get Started →
+
+          {/* Button */}
+          <button className="mt-8 bg-[#296AD2] hover:bg-[#2459A8] text-white px-6 py-3 rounded-md transition">
+            Contact Us →
           </button>
         </div>
-        <div className="md:w-1/2">
-          <img src={student2} alt="Transform" className="w-full rounded-lg shadow"/>
+
+        {/* Right column */}
+        <div className="md:w-1/2 relative flex justify-center">
+          {/* Blue circle behind the image */}
+          <div className="absolute -z-10 w-64 h-64 md:w-80 md:h-80 bg-[#296AD2] rounded-full"></div>
+          <img
+            src={student2}
+            alt="Transform"
+            className="relative z-10 w-full max-w-sm md:max-w-md rounded-lg shadow-lg"
+          />
         </div>
+
       </div>
     </section>
   )

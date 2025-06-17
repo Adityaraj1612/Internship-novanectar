@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import faqIcon from '../../assets/FAQ.png'
+import faqIcon from '../../assets/Vector.png'
 
 const faqs = [
   {
