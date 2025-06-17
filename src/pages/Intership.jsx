@@ -38,6 +38,7 @@ import vedioiamge from '../assets/vedio editor.jpeg';
 import emailmarketingimage from '../assets/email-marketing-thumbnail.webp';
 import advancedexcelimage from '../assets/advanced-excel.jpg';
 import telecallingimage from '../assets/telecalling.png';
+import callcentreimage from '../assets/call-centre.webp';
 const CourseCard = ({ title, description, duration, price, oldPrice, image }) => (
   <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 relative">
     <img src={image} alt={`${title} Thumbnail`} className="w-full h-48 object-cover" />
@@ -227,6 +228,7 @@ export default function InternshipCoursesPage() {
       oldPrice: '10000',
       image: mernstackimage
     },
+
 {
       title: 'Machine Learning',
       description: 'Machine Learning is a technology that allows computers to learn from data and improve their performance without being explicitly programmed.',
@@ -370,6 +372,14 @@ export default function InternshipCoursesPage() {
       price: '5999',
       oldPrice: '10000',
       image: telecallingimage
+    },
+ {
+      title: 'Support Calling',
+      description: ' This often involves on-call management, where personnel are responsible for addressing critical issues or providing customer service when the main support staff is unavailable. .',
+      duration: '3 Months',
+      price: '5999',
+      oldPrice: '10000',
+      image: callcentreimage
     },
   ];
 

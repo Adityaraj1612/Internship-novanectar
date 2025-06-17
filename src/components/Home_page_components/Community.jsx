@@ -1,35 +1,56 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import community1 from '../../assets/community1.jpg'
-import community2 from '../../assets/community2.jpg'
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import community1 from '../../assets/community1.jpg';
+import community2 from '../../assets/community2.jpg';
 
 export default function Community() {
-  const [count, setCount] = useState(0)
-  const navigate = useNavigate() // ✅ navigate hook
+  const [visible, setVisible] = useState(false);
+  const [count, setCount] = useState(0);
+  const communityRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const target = 50
-    const duration = 2000
-    const intervalTime = 30
-    const decrement = target / (duration / intervalTime)
-
-    const counter = setInterval(() => {
-      setCount((prev) => {
-        if (prev >= target) {
-          clearInterval(counter)
-          return target
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !visible) {
+          setVisible(true);
         }
-        return prev + decrement
-      })
-    }, intervalTime)
+      },
+      { threshold: 0.5 }
+    );
 
-    return () => clearInterval(counter)
-  }, [])
+    if (communityRef.current) {
+      observer.observe(communityRef.current);
+    }
 
-  const formattedCount = Math.floor(count)
+    return () => {
+      if (communityRef.current) observer.unobserve(communityRef.current);
+    };
+  }, [visible]);
+
+  useEffect(() => {
+    if (!visible) return;
+
+    const target = 50;
+    const increment = Math.ceil(target / 50); // ~50 steps
+    const interval = setInterval(() => {
+      setCount((prev) => {
+        if (prev < target) {
+          return Math.min(prev + increment, target);
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [visible]);
+
+  const formattedCount = Math.floor(count);
 
   return (
-    <section className="py-16 bg-white">
+    <section ref={communityRef} className="py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center gap-10">
         {/* Left column with grid layout */}
         <div className="md:w-1/2 grid grid-cols-2 gap-4">
@@ -44,7 +65,7 @@ export default function Community() {
 
           <div className="bg-blue-50 p-6 rounded-lg text-center flex flex-col justify-center shadow-md transition-transform duration-500 hover:scale-105">
             <h3 className="text-4xl font-bold text-blue-800">{formattedCount}+</h3>
-            <p className="mt-2 text-lg text-blue-900">Offline Internships</p>
+            <p className="mt-2 text-lg text-blue-900">Institutions Onboarded</p>
           </div>
         </div>
 
@@ -74,5 +95,5 @@ export default function Community() {
         </div>
       </div>
     </section>
-  )
+  );
 }
