@@ -35,7 +35,7 @@ export default function StatsBar() {
     if (!visible) return;
 
     const intervals = stats.map((stat, index) => {
-      const increment = Math.ceil(stat.target / 50); // Adjust speed here
+      const increment = Math.ceil(stat.target / 50);
       return setInterval(() => {
         setCounts((prev) => {
           const newCounts = [...prev];
@@ -51,18 +51,31 @@ export default function StatsBar() {
   }, [visible]);
 
   return (
-    <section ref={statsRef} className="bg-blue-600 text-white py-8">
-      <div className="container mx-auto px-4 lg:px-8 grid grid-cols-2 md:grid-cols-4 text-center">
+    <section
+      ref={statsRef}
+      className="bg-[#296AD2] text-white py-10 px-4"
+    >
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center relative">
         {stats.map((stat, i) => (
-          <div key={i}>
-            <p className="text-2xl font-bold">
-              {counts[i] >= 1000 ? `${(counts[i] / 1000).toFixed(1)}K+` : `${counts[i]}+`}
+          <div
+            key={i}
+            className="relative px-4 py-6 flex flex-col items-center justify-center"
+          >
+            {/* Stat content */}
+            <p className="text-3xl font-bold">
+              {counts[i] >= 1000
+                ? `${(counts[i] / 1000).toFixed(1)}K+`
+                : `${counts[i]}+`}
             </p>
-            <p className="text-sm">{stat.label}</p>
+            <p className="text-sm mt-1">{stat.label}</p>
+
+            {/* Divider (not on last item) */}
+            {i < stats.length - 1 && (
+              <div className="absolute right-0 top-2 bottom-2 w-px bg-white opacity-50 hidden md:block" />
+            )}
           </div>
         ))}
       </div>
     </section>
   );
 }
-
