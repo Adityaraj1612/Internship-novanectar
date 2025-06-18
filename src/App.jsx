@@ -8,9 +8,7 @@ import HomePage from './pages/Home';
 import AboutUs from "./pages/AboutUs";
 import InternshipCoursesPage from './pages/Intership';
 import Testimonial from './components/Home_page_components/Testimonial';
-import ContactUS from "./pages/ContactUS"; // Adjust path accordingly
 import Blog from './pages/Blog';
-<Route path="/contact" element={<ContactUS />} />
 
 function App() {
   return (
@@ -22,7 +20,6 @@ function App() {
           <Route path="/internship" element={<InternshipCoursesPage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/testimonial" element={<Testimonial />} />
-          <Route path="/contactus" element={<ContactUS />} />
             <Route path="/blog" element={<Blog />} />
             
           {/* Add more routes as needed */}
