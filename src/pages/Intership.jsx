@@ -25,7 +25,6 @@ import frontendimqage from '../assets/frontend-developer.jpg';
   import seoImage from '../assets/SEO.jpg';
   import contentWritingImage from '../assets/content-writing.jpg';
   import HRimage from '../assets/HR..jpg';
-import javaFullStackkImage from '../assets/java-full-stack.jpg';
 import meanstackImage from '../assets/mean-stack-development.jpg';  
 import  mernstackimage from '../assets/mern-stack-development.jpg';
 import socialMediamanagerImage from '../assets/social-media-manager..jpg';
@@ -39,6 +38,8 @@ import emailmarketingimage from '../assets/email-marketing-thumbnail.webp';
 import advancedexcelimage from '../assets/advanced-excel.jpg';
 import telecallingimage from '../assets/telecalling.png';
 import callcentreimage from '../assets/call-centre.webp';
+import socialMediaMarketingImage from '../assets/socialmediamarketing.png';
+import metaGoogleAdsImage from '../assets/meta-vs-google-ads.webp';
 const CourseCard = ({ title, description, duration, price, oldPrice, image }) => (
   <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 relative">
     <img src={image} alt={`${title} Thumbnail`} className="w-full h-48 object-cover" />
@@ -58,12 +59,14 @@ const CourseCard = ({ title, description, duration, price, oldPrice, image }) =>
         <button className="px-4 py-1 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
           Register Now
         </button>
+
       </div>
     </div>
     <span className="absolute top-2 right-2 bg-blue-100 text-blue-600 text-xs font-medium px-2 py-1 rounded-full">
       {duration}
     </span>
   </div>
+
 );
 
 export default function InternshipCoursesPage() {
@@ -381,6 +384,22 @@ export default function InternshipCoursesPage() {
       oldPrice: '10000',
       image: callcentreimage
     },
+ {
+      title:   'Social Media Marketing ',
+      description: 'This internship  involves creating and publishing content, engaging with the audience, and running social media ads to achieve marketing goals like increasing brand awareness, driving website traffic, and boosting sales. ',
+      duration: '3 Months',
+      price: '5999',
+      oldPrice: '10000',
+      image: socialMediaMarketingImage
+    },
+ {
+      title: 'Meta ads & Google ads',
+      description: 'Meta Ads excels at building brand awareness and engaging users through social media, while Google Ads is more effective for reaching users actively searching for products or services. ',
+      duration: '3 Months',
+      price: '5999',
+      oldPrice: '10000',
+      image: metaGoogleAdsImage
+    },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -390,9 +409,10 @@ export default function InternshipCoursesPage() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentCourses = courses.slice(indexOfFirstItem, indexOfLastItem);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+const paginate = (pageNumber) => {
+  setCurrentPage(pageNumber);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
   return (
     <div className="bg-gray-50">
       <header className="text-center py-10">
@@ -420,6 +440,7 @@ export default function InternshipCoursesPage() {
             >
               {i + 1}
             </button>
+    
           ))}
         </div>
       </main>
