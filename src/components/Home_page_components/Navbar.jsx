@@ -11,7 +11,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Internship', href: '/internship' },
   { name: 'About Us', href: '/about' },      // <-- FIXED HERE
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'Contact Us', href: '/contactus' },
   { name: 'Blog', href: '/blog' },
 ];
 
