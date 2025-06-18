@@ -6,12 +6,13 @@ import logo from "../../assets/logo.png";
 import img1 from "../../assets/img2.jpg";
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'Internship', href: '/internship' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Contact Us', href: '/contactus' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Home', href: '/' },
+  { name: 'Internship', href: '/internship' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Contact Us', href: '/contact-us' },
+  { name: 'Blog', href: '/blog' },
 ];
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

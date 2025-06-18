@@ -1,19 +1,62 @@
-import React from 'react';
 
-const ContactHero = () => {
+import React from 'react'
+import student2 from '../../assets/transform.png'
+import faqIcon from '../../assets/Vector.png'
+export default function TransformCTA() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-4 mt-10 mb-8">
-      <div>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Transform Your Future with Excellence in Education</h2>
-        <ul className="list-none space-y-2 text-gray-700">
-          <li>✅ Unlock your potential with expert guidance.</li>
-          <li>✅ Achieve your academic and personal goals.</li>
-          <li>✅ Empower yourself with lifelong learning skills.</li>
-        </ul>
-      </div>
-      <img src="/assets/hero-girl.png" alt="Hero Girl" className="w-64 mt-6 md:mt-0" />
-    </div>
-  );
-};
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+        
+        {/* Left column */}
+        <div className="md:w-1/2 pl-4">
+          {/* Contact Us pill */}
+          <div className="flex items-center mb-3">
+            <span className="flex items-center bg-white shadow px-3 py-1 rounded-full">
+            
+              <img src={faqIcon} alt="FAQ Icon" className="w-4 h-4" />
+              <span className="text-sm font-medium">Contact Us</span>
+            </span>
+          </div>
 
-export default ContactHero;
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Transform Your Future with Excellence in Education
+          </h2>
+
+          {/* Bullet list */}
+          <ul className="space-y-4 text-gray-600">
+            {[
+              'Unlock your potential with expert guidance.',
+              'Achieve your academic and personal goals.',
+              'Empower yourself with lifelong learning skills.'
+            ].map((txt, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <div className="mt-1 w-5 h-5 bg-[#0EA16B] text-white flex items-center justify-center rounded-full">
+                  ✓
+                </div>
+                <span className="text-left">{txt}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Button */}
+          <button className="mt-8 bg-[#296AD2] hover:bg-black text-white px-6 py-3 rounded-md transition">
+            Contact Us →
+          </button>
+        </div>
+
+        {/* Right column */}
+        <div className="md:w-1/2 relative flex justify-center">
+          {/* Blue circle behind the image */}
+          <div className="absolute -z-10 w-64 h-64 md:w-80 md:h-80 bg-[#296AD2] rounded-full"></div>
+          <img
+            src={student2}
+            alt="Transform"
+            className="relative z-10 w-full max-w-sm md:max-w-md rounded-lg shadow-lg"
+          />
+        </div>
+
+      </div>
+    </section>
+  )
+}

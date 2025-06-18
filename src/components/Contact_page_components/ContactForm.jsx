@@ -1,19 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
+import faqIcon from '../../assets/Vector.png';
 
 const ContactForm = () => {
+  const [image, setImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => setImagePreview(reader.result);
+      reader.readAsDataURL(file);
+    } else {
+      setImagePreview(null);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    alert('Form submitted!');
+  };
+
   return (
-    <form className="bg-white p-6 rounded-xl shadow-lg w-full max-w-xl">
-      <h3 className="text-2xl font-bold mb-4">Need Help? Message.</h3>
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        <input type="text" placeholder="First Name" className="border p-2 rounded" />
-        <input type="text" placeholder="Last Name" className="border p-2 rounded" />
-        <input type="tel" placeholder="Phone Number" className="border p-2 rounded" />
-        <input type="email" placeholder="Email Address" className="border p-2 rounded" />
+    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md w-full">
+      <div className="flex items-center mb-3">
+        <span className="flex items-center bg-white shadow px-3 py-1 rounded-full">
+          <img src={faqIcon} alt="FAQ Icon" className="w-4 h-4" />
+          <span className="text-sm font-medium ml-2">Send Us Message</span>
+        </span>
       </div>
-      <input type="text" placeholder="Subject" className="border w-full p-2 rounded mb-4" />
-      <input type="text" placeholder="Address" className="border w-full p-2 rounded mb-4" />
-      <textarea placeholder="Message" className="border w-full p-2 rounded mb-4" rows="4" />
-      <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+
+      <h3 className="text-5xl font-bold mb-6">Need Help? Message.</h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <input type="text" placeholder="Enter your first name" className="border border-gray-300 text-sm p-3 rounded focus:outline-none" />
+        <input type="text" placeholder="Enter your last name" className="border border-gray-300 text-sm p-3 rounded focus:outline-none" />
+        <input type="tel" placeholder="Enter your phone number" className="border border-gray-300 text-sm p-3 rounded focus:outline-none" />
+        <input type="email" placeholder="Enter your email address" className="border border-gray-300 text-sm p-3 rounded focus:outline-none" />
+      </div>
+
+      <input type="text" placeholder="Enter subject" className="border border-gray-300 text-sm p-3 rounded w-full mb-4 focus:outline-none" />
+      <input type="text" placeholder="Enter your address" className="border border-gray-300 text-sm p-3 rounded w-full mb-4 focus:outline-none" />
+
+      {/* ✅ Image Upload Field */}
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        className="border border-gray-300 text-sm p-3 rounded w-full mb-4 focus:outline-none"
+      />
+
+      {/* ✅ Image Preview */}
+      {imagePreview && (
+        <div className="mb-4">
+          <p className="text-sm font-medium mb-1">Image Preview:</p>
+          <img src={imagePreview} alt="Preview" className="w-40 h-40 object-cover rounded border" />
+        </div>
+      )}
+
+      <textarea placeholder="Type message here…" className="border border-gray-300 text-sm p-3 rounded w-full mb-6 focus:outline-none" rows="4" />
+
+      <button type="submit" className="bg-[#296AD2] text-white text-sm font-semibold px-81 py-3 rounded-md hover:bg-black transition duration-300">
+        Send Message
+      </button>
     </form>
   );
 };
