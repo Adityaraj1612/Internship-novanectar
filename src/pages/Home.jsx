@@ -17,12 +17,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-             {/* small three‑column info under hero */}
-<<<<<<< HEAD
-      <FeaturedCourses />
-=======
               <FeaturedCourses />
->>>>>>> 2238abaa5f1647dc57629e23faa7ed8850ec15e3
       <TopPicks />
       <Community />
       <StatsBar />
