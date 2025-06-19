@@ -9,7 +9,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'Internship', href: '/internship' },
   { name: 'About Us', href: '/about' },
-  { name: 'Contact Us', href: '/contact-us' },
+  { name: 'Contact Us', href: '/contactus' },
   { name: 'Blog', href: '/blog' },
 ];
 
@@ -22,9 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-         <a href="#hero" className="flex items-left space-x-2">
-  <img src={logo} alt="NovaNectar Logo" className="h-12 w-auto object-contain" />
-</a>
+       <Link to= '/'> <img src={logo} alt="NovaNectar Logo" className="h-12 w-auto object-contain" /></Link>
 
 
           {/* Desktop Nav */}
