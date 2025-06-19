@@ -7,7 +7,7 @@ import HomePage from './pages/Home';
 import AboutUs from "./pages/AboutUs";
 import InternshipCoursesPage from './pages/Intership';
 import Testimonial from './components/Home_page_components/Testimonial';
-import ContactUs from "./pages/ContactUS"; // Adjust path accordingly
+import ContactUs from "./pages/ContactUs"; // Adjust path accordingly
 import Blog from './pages/Blog';
 
 function App() {
