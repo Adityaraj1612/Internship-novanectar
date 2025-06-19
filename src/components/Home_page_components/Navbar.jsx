@@ -26,7 +26,8 @@ export default function Navbar() {
 
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center space-x-6">
+          <ul
+ className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -37,7 +38,21 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul>{/* Login / Signup Buttons (Desktop) */}
+<div className="hidden md:flex items-center space-x-4">
+  <Link to="/login">
+    <button className="text-blue-600 font-semibold px-4 py-2 rounded hover:bg-blue-100 transition">
+      Login
+    </button>
+  </Link>
+  <Link to="/signup">
+    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      Sign Up
+    </button>
+  </Link>
+</div>
+
+
 
           {/* Search + User */}
           <div className="flex items-center space-x-4">
@@ -69,6 +84,20 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+{/* Login / Signup Buttons (Mobile) */}
+<div className="mt-6 flex flex-col space-y-3">
+  <Link to="/login">
+    <button className="w-full text-blue-600 font-semibold px-4 py-2 rounded border border-blue-600 hover:bg-blue-50 transition">
+      Login
+    </button>
+  </Link>
+  <Link to="/signup">
+    <button className="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      Sign Up
+    </button>
+  </Link>
+</div>
+
       </div>
     </nav>
   );
