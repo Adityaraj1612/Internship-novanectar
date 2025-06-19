@@ -9,7 +9,9 @@ import InternshipCoursesPage from './pages/Intership';
 import Testimonial from './components/Home_page_components/Testimonial';
 import ContactUs from "./pages/ContactUs"; // Adjust path accordingly
 import Blog from './pages/Blog';
-
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import SearchResult from './pages/SearchResult';
 function App() {
   return (
     <Router>
@@ -22,7 +24,10 @@ function App() {
           <Route path="/testimonial" element={<Testimonial />} />
           <Route path="/contactus" element={<ContactUs />} />
             <Route path="/blog" element={<Blog />} />
-            
+            <Route path="/login" element={<Login />} />
+    <Route path="/signup" element={<Signup />} />
+            <Route path="/search" element={<SearchResult />} />
+
           {/* Add more routes as needed */}
         </Routes>
       </div>
