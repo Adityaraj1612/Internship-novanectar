@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import community1 from '../../assets/community1.jpg';
@@ -87,7 +88,10 @@ export default function Community() {
             ))}
           </ul>
           <button
-            onClick={() => navigate('/about')}
+            onClick={() => {
+              navigate('/about');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="mt-6 bg-blue-800 text-white px-6 py-2 rounded hover:bg-black transition"
           >
             Learn More About Us →

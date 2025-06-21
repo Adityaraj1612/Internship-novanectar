@@ -1,10 +1,12 @@
-// src/components/WhyChooseUs.jsx
-import React from 'react'
-import { motion } from 'framer-motion'
-import icon1 from '../../assets/icon1.png'
-import icon2 from '../../assets/icon2.png'
-import icon3 from '../../assets/icon3.png'
-import icon4 from '../../assets/icon4.png'
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-irregular-whitespace */
+import React from 'react';
+import { motion } from 'framer-motion'; // ✅ Required import
+
+import icon1 from '../../assets/icon1.png';
+import icon2 from '../../assets/icon2.png';
+import icon3 from '../../assets/icon3.png';
+import icon4 from '../../assets/icon4.png';
 
 const items = [
   {
@@ -27,7 +29,7 @@ const items = [
     title: 'Innovative Learning',
     desc: 'We provide an engaging learning environment enhanced by technology and modern resources.',
   },
-]
+];
 
 export default function WhyChooseUs() {
   return (
@@ -55,5 +57,5 @@ export default function WhyChooseUs() {
         </div>
       </div>
     </section>
-  )
+  );
 }

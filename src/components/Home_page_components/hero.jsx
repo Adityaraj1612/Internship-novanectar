@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import React from 'react'
 import faqIcon from '../../assets/Vector.png'     // thunderbolt
 import satisfiedIcon from '../../assets/100percent_icon.png' // 100% icon
@@ -33,15 +32,17 @@ export default function Hero() {
 
           {/* Buttons full‑width on md+ */}
           <div className="flex flex-col sm:flex-row gap-2">
-            <button className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition text-center">
-              Enroll Now →
-            </button>
-            <Link to="/internship">
-            <button className="flex-1 border-2 font-bold border-blue-600 text-blue-800 px-20 py-4 rounded-md hover:bg-blue-100 transition text-center">
+            <Link to="/internship"  onClick={() => window.scrollTo(0, 0)}>
+            <button className="flex-1 border-2 font-bold border-blue-600 text-blue-800 px-10 py-4 rounded-md hover:bg-blue-100 transition text-center">
               Explore Internship →
             
             </button>
             </Link>
+             <Link to="/signup"  onClick={() => window.scrollTo(0, 0)}>
+            <button className="flex-1 bg-blue-600 text-white px-10 py-4 rounded-md hover:bg-blue-700 transition text-center">
+              Enroll Now →
+            </button>
+           </Link>
           </div>
         </div>
 

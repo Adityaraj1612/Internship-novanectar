@@ -14,7 +14,7 @@ export default function TransformCTA() {
             <span className="flex items-center bg-white shadow px-3 py-1 rounded-full">
               {/* replace with your thunderbolt icon */}
               <img src={faqIcon} alt="FAQ Icon" className="w-4 h-4" />
-              <span className="text-sm font-medium">Contact Us</span>
+              <span className="text-sm font-medium">ContactUs</span>
             </span>
           </div>
 
@@ -40,8 +40,9 @@ export default function TransformCTA() {
           </ul>
 
           {/* Button */}
+          
           <button className="mt-8 bg-[#296AD2] hover:bg-[#2459A8] text-white px-6 py-3 rounded-md transition">
-            Contact Us →
+            ContactUs →
           </button>
         </div>
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import React from 'react';
 import { Link } from 'react-router-dom'; // ✅ Step 1: Import Link
 import blogImg from '../../assets/blog.png';

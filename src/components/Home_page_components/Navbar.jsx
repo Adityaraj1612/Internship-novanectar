@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import React, { useState } from 'react';
 import { Menu, Search } from 'lucide-react';
 import { FaXbox } from 'react-icons/fa';

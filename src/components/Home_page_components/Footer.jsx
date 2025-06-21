@@ -33,10 +33,10 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-3">Links</h2>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/internship">Internship</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/events">Events</Link></li>
+            <li><Link to="/about" onClick={() => window.scrollTo(0, 0)}>About Us</Link></li>
+            <li><Link to="/internship"  onClick={() => window.scrollTo(0, 0)}>Internship</Link></li>
+            <li><Link to="/blog" onClick={() => window.scrollTo(0, 0)}>Blog</Link></li>
+            <li><Link to="/events" onClick={() => window.scrollTo(0, 0)}>Events</Link></li>
           </ul>
         </div>
 

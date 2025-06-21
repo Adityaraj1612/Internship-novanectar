@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 // src/components/TopPicks.jsx
 import React from 'react';
 
