@@ -53,31 +53,40 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  to={link.href}
-                  className="text-black hover:text-blue-600 font-semibold transition"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-{/* Login / Signup Buttons (Desktop) */}
-<div className="hidden md:flex items-center space-x-4">
-  <Link to="/login">
-    <button className="text-black-600 font-semibold px-4 py-2 rounded hover:bg-blue-100 transition">
-      Login
-    </button>
-  </Link>
-  <Link to="/signup">
-    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-      Sign Up
-    </button>
-  </Link>
-</div>
+                 <ul className="hidden md:flex items-center space-x-6">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.href}
+                  className="text-black hover:text-blue-600 font-semibold transition"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {/* Login / Signup Buttons (Desktop) */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link to="/login">
+              <button className="text-black-600 font-semibold px-4 py-2 rounded hover:bg-blue-100 transition">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                Sign Up
+              </button>
+            </Link>
+          </div>
+          {/* Hamburger Menu (Mobile) */}
+          <button
+            className="flex md:hidden ml-2"
+            onClick={() => setOpen(true)}
+            aria-label="Open Menu"
+          >
+            <Menu className="h-6 w-6 text-black" />
+          </button>
+        </div>
 
 
           {/* Search Icon + Input Dropdown */}
@@ -111,7 +120,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+     
 
       {/* Mobile Menu */}
       <div className={`fixed top-0 left-0 w-full h-full bg-white z-40 p-6 transform transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}>
