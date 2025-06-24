@@ -14,7 +14,7 @@ export default function TransformCTA() {
           {/* Contact Us pill */}
           <div className="flex items-center mb-3">
             <span className="flex items-center bg-white shadow px-3 py-1 rounded-full">
-              {/* replace with your thunderbolt icon */}
+              
               <img src={faqIcon} alt="FAQ Icon" className="w-4 h-4" />
               <span className="text-sm font-medium">ContactUs</span>
             </span>
